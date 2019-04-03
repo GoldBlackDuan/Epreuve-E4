@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File mgvpcws/facade.php | MGvpc-Contexte</title>
+
+	<script type="text/javascript" src="resources/combined.js?2882499003"></script>
+	<script type="text/javascript" src="elementlist.js?3230865684"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-client.html">client</a></li>
+				<li><a href="class-clientManager.html">clientManager</a></li>
+				<li><a href="class-commande.html">commande</a></li>
+				<li><a href="class-commandeManager.html">commandeManager</a></li>
+				<li><a href="class-database.html">database</a></li>
+				<li><a href="class-produit.html">produit</a></li>
+				<li><a href="class-produitManager.html">produitManager</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html" class="invalid">__autoload</a></li>
+				<li><a href="function-addClient.html">addClient</a></li>
+				<li class="active"><a href="function-deleteClient.html">deleteClient</a></li>
+				<li><a href="function-getClientId.html">getClientId</a></li>
+				<li><a href="function-getClients.html">getClients</a></li>
+				<li><a href="function-getClientsNom.html">getClientsNom</a></li>
+				<li><a href="function-getCommandesParClient.html">getCommandesParClient</a></li>
+				<li><a href="function-updateClient.html">updateClient</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="function-deleteClient.html" title="Summary of deleteClient"><span>Function</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a><span class="php-keyword1">function</span> <a id="___autoload" href="#___autoload">__autoload</a>(<span class="php-var">$class_name</span>){
+</span><span id="3" class="l"><a class="l" href="#3"> 3: </a>    <span class="php-keyword1">require</span>(<span class="php-quote">'../classes/'</span> . <span class="php-var">$class_name</span> . <span class="php-quote">'.class.php'</span>); 
+</span><span id="4" class="l"><a class="l" href="#4"> 4: </a>}
+</span><span id="5" class="l"><a class="l" href="#5"> 5: </a>
+</span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment">// Retourne la liste de tous les clients</span>
+</span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-keyword1">function</span> <a id="_getClients" href="#_getClients">getClients</a>(){
+</span><span id="8" class="l"><a class="l" href="#8"> 8: </a>    <span class="php-var">$manager</span> = <span class="php-keyword1">new</span> clientManager(database::getDB());
+</span><span id="9" class="l"><a class="l" href="#9"> 9: </a>    <span class="php-var">$tabClients</span> = <span class="php-var">$manager</span>-&gt;getList();
+</span><span id="10" class="l"><a class="l" href="#10">10: </a>    <span class="php-keyword1">echo</span> <span class="php-keyword2">json_encode</span>(<span class="php-var">$tabClients</span>);
+</span><span id="11" class="l"><a class="l" href="#11">11: </a>}
+</span><span id="12" class="l"><a class="l" href="#12">12: </a>
+</span><span id="13" class="l"><a class="l" href="#13">13: </a><span class="php-comment">// Retourne le client dont l'id est passé en paramètre au format JSON.</span>
+</span><span id="14" class="l"><a class="l" href="#14">14: </a><span class="php-keyword1">function</span> <a id="_getClientId" href="#_getClientId">getClientId</a>(<span class="php-var">$id</span>){
+</span><span id="15" class="l"><a class="l" href="#15">15: </a>    <span class="php-var">$manager</span> = <span class="php-keyword1">new</span> clientManager(database::getDB());
+</span><span id="16" class="l"><a class="l" href="#16">16: </a>    <span class="php-var">$client</span> = <span class="php-var">$manager</span>-&gt;get(<span class="php-var">$id</span>);
+</span><span id="17" class="l"><a class="l" href="#17">17: </a>    <span class="php-keyword1">echo</span> <span class="php-keyword2">json_encode</span>(<span class="php-var">$client</span>);
+</span><span id="18" class="l"><a class="l" href="#18">18: </a>}
+</span><span id="19" class="l"><a class="l" href="#19">19: </a>
+</span><span id="20" class="l"><a class="l" href="#20">20: </a><span class="php-comment">//retourne les clients correspondant au nom est passé en paramètre</span>
+</span><span id="21" class="l"><a class="l" href="#21">21: </a><span class="php-keyword1">function</span> <a id="_getClientsNom" href="#_getClientsNom">getClientsNom</a>(<span class="php-var">$nom</span>){
+</span><span id="22" class="l"><a class="l" href="#22">22: </a>    <span class="php-var">$manager</span> = <span class="php-keyword1">new</span> clientManager(database::getDB());
+</span><span id="23" class="l"><a class="l" href="#23">23: </a>    <span class="php-var">$tabClients</span> = <span class="php-var">$manager</span>-&gt;getList(<span class="php-quote">&quot;WHERE nomCli LIKE '%&quot;</span>.<span class="php-var">$nom</span>.<span class="php-quote">&quot;%'&quot;</span>);
+</span><span id="24" class="l"><a class="l" href="#24">24: </a>    <span class="php-keyword1">echo</span> <span class="php-keyword2">json_encode</span>(<span class="php-var">$tabClients</span>);
+</span><span id="25" class="l"><a class="l" href="#25">25: </a>}
+</span><span id="26" class="l"><a class="l" href="#26">26: </a>
+</span><span id="27" class="l"><a class="l" href="#27">27: </a><span class="php-comment">//retourne la liste de toutes les commandes pour un client donné</span>
+</span><span id="28" class="l"><a class="l" href="#28">28: </a><span class="php-keyword1">function</span> <a id="_getCommandesParClient" href="#_getCommandesParClient">getCommandesParClient</a>(<span class="php-var">$idCli</span>){
+</span><span id="29" class="l"><a class="l" href="#29">29: </a>    <span class="php-var">$manager</span> = <span class="php-keyword1">new</span> commandeManager(database::getDB());
+</span><span id="30" class="l"><a class="l" href="#30">30: </a>    <span class="php-var">$tabCdes</span> = <span class="php-var">$manager</span>-&gt;getList(<span class="php-quote">&quot;WHERE idCliCde=&quot;</span>.<span class="php-var">$idCli</span>);
+</span><span id="31" class="l"><a class="l" href="#31">31: </a>    <span class="php-keyword1">echo</span> <span class="php-keyword2">json_encode</span>(<span class="php-var">$tabCdes</span>);
+</span><span id="32" class="l"><a class="l" href="#32">32: </a>}
+</span><span id="33" class="l"><a class="l" href="#33">33: </a>
+</span><span id="34" class="l"><a class="l" href="#34">34: </a><span class="php-comment">// Ajoute un client à la base de donnée</span>
+</span><span id="35" class="l"><a class="l" href="#35">35: </a><span class="php-keyword1">function</span> <a id="_addClient" href="#_addClient">addClient</a>(<span class="php-var">$nom</span>, <span class="php-var">$prenom</span>, <span class="php-var">$rue</span>, <span class="php-var">$cp</span>, <span class="php-var">$ville</span>){
+</span><span id="36" class="l"><a class="l" href="#36">36: </a>    <span class="php-var">$unClient</span> = <span class="php-keyword1">new</span> client(<span class="php-var">$nom</span>,<span class="php-var">$prenom</span>,<span class="php-var">$rue</span>,<span class="php-var">$cp</span>,<span class="php-var">$ville</span>);
+</span><span id="37" class="l"><a class="l" href="#37">37: </a>    <span class="php-var">$manager</span> = <span class="php-keyword1">new</span> clientManager(database::getDB());
+</span><span id="38" class="l"><a class="l" href="#38">38: </a>    <span class="php-var">$result</span> = <span class="php-var">$manager</span>-&gt;save(<span class="php-var">$unClient</span>);
+</span><span id="39" class="l"><a class="l" href="#39">39: </a>    <span class="php-keyword1">echo</span> <span class="php-keyword2">json_encode</span>(<span class="php-quote">'{&quot;id&quot;:&quot;'</span>.<span class="php-var">$result</span>.<span class="php-quote">'&quot;}'</span>);
+</span><span id="40" class="l"><a class="l" href="#40">40: </a>}
+</span><span id="41" class="l"><a class="l" href="#41">41: </a>
+</span><span id="42" class="l"><a class="l" href="#42">42: </a><span class="php-comment">// Modifie un client de la base de données</span>
+</span><span id="43" class="l"><a class="l" href="#43">43: </a><span class="php-keyword1">function</span> <a id="_updateClient" href="#_updateClient">updateClient</a>(<span class="php-var">$id</span>,<span class="php-var">$nom</span>, <span class="php-var">$prenom</span>, <span class="php-var">$rue</span>, <span class="php-var">$cp</span>, <span class="php-var">$ville</span>){
+</span><span id="44" class="l"><a class="l" href="#44">44: </a>    <span class="php-var">$leClient</span> = <span class="php-keyword1">new</span> client(<span class="php-var">$nom</span>,<span class="php-var">$prenom</span>,<span class="php-var">$rue</span>,<span class="php-var">$cp</span>,<span class="php-var">$ville</span>);
+</span><span id="45" class="l"><a class="l" href="#45">45: </a>    <span class="php-var">$leClient</span>-&gt;setId(<span class="php-var">$id</span>);
+</span><span id="46" class="l"><a class="l" href="#46">46: </a>    <span class="php-var">$manager</span> = <span class="php-keyword1">new</span> clientManager(database::getDB());
+</span><span id="47" class="l"><a class="l" href="#47">47: </a>    <span class="php-var">$result</span> = <span class="php-var">$manager</span>-&gt;save(<span class="php-var">$leClient</span>);
+</span><span id="48" class="l"><a class="l" href="#48">48: </a>    <span class="php-keyword1">echo</span> <span class="php-keyword2">json_encode</span>(<span class="php-quote">'{&quot;id&quot;:&quot;'</span>.<span class="php-var">$result</span>.<span class="php-quote">'&quot;}'</span>);
+</span><span id="49" class="l"><a class="l" href="#49">49: </a>}
+</span><span id="50" class="l"><a class="l" href="#50">50: </a>
+</span><span id="51" class="l"><a class="l" href="#51">51: </a><span class="php-comment">// Supprime un client de la base de données</span>
+</span><span id="52" class="l"><a class="l" href="#52">52: </a><span class="php-keyword1">function</span> <a id="_deleteClient" href="#_deleteClient">deleteClient</a>(<span class="php-var">$id</span>){   
+</span><span id="53" class="l"><a class="l" href="#53">53: </a>    <span class="php-var">$manager</span> = <span class="php-keyword1">new</span> clientManager(database::getDB());
+</span><span id="54" class="l"><a class="l" href="#54">54: </a>    <span class="php-var">$leClient</span> = <span class="php-var">$manager</span>-&gt;get(<span class="php-var">$id</span>);
+</span><span id="55" class="l"><a class="l" href="#55">55: </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_object</span>(<span class="php-var">$leClient</span>)) {
+</span><span id="56" class="l"><a class="l" href="#56">56: </a>        <span class="php-keyword1">echo</span> <span class="php-keyword2">json_encode</span>(<span class="php-quote">'{&quot;resultat&quot;:false}'</span>);
+</span><span id="57" class="l"><a class="l" href="#57">57: </a>    }
+</span><span id="58" class="l"><a class="l" href="#58">58: </a>    <span class="php-keyword1">else</span> {
+</span><span id="59" class="l"><a class="l" href="#59">59: </a>        <span class="php-var">$result</span> = <span class="php-var">$manager</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$leClient</span>);
+</span><span id="60" class="l"><a class="l" href="#60">60: </a>        <span class="php-keyword1">echo</span> <span class="php-keyword2">json_encode</span>(<span class="php-quote">'{&quot;resultat&quot;:'</span>.<span class="php-var">$result</span>.<span class="php-quote">'}'</span>);
+</span><span id="61" class="l"><a class="l" href="#61">61: </a>    }
+</span><span id="62" class="l"><a class="l" href="#62">62: </a></span>}</code></pre>
+
+	<div id="footer">
+		MGvpc-Contexte API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

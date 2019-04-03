@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class commande | MGvpc-Contexte</title>
+
+	<script type="text/javascript" src="resources/combined.js?2882499003"></script>
+	<script type="text/javascript" src="elementlist.js?3230865684"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-client.html">client</a></li>
+				<li><a href="class-clientManager.html">clientManager</a></li>
+				<li class="active"><a href="class-commande.html">commande</a></li>
+				<li><a href="class-commandeManager.html">commandeManager</a></li>
+				<li><a href="class-database.html">database</a></li>
+				<li><a href="class-produit.html">produit</a></li>
+				<li><a href="class-produitManager.html">produitManager</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html" class="invalid">__autoload</a></li>
+				<li><a href="function-addClient.html">addClient</a></li>
+				<li><a href="function-deleteClient.html">deleteClient</a></li>
+				<li><a href="function-getClientId.html">getClientId</a></li>
+				<li><a href="function-getClients.html">getClients</a></li>
+				<li><a href="function-getClientsNom.html">getClientsNom</a></li>
+				<li><a href="function-getCommandesParClient.html">getCommandesParClient</a></li>
+				<li><a href="function-updateClient.html">updateClient</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class commande</h1>
+
+
+	<div class="description">
+	
+<p>Classe représentant les commandes.</p>
+
+<p>Les commandes sont définis par<br />
+- un numéro unique<br />
+- une date<br />
+- un état<br />
+- un client (instance d'un objet client)<br />
+- un tabelau d'objet produit<br />
+- un tableau d'entier représentant les quantités</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>commande</span></b>			
+			 implements 
+				<a href="class-JsonSerializable.html"><span>JsonSerializable</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>Author:</b>
+				Ben<br />
+		<b>Located at</b> <a href="source-class-commande.html#2-155" title="Go to source code">classes/commande.class.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-commande.html#23-32" title="Go to source code">__construct</a>( <span><code><a href="class-client.html">client</a></code> <var>$client</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Instancie un objet commande.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Instancie un objet commande.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$client</var></dt>
+					<dd><code><code><a href="class-client.html">client</a></code></code><br>Client qui passe la commande.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setNum" id="_setNum">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setNum">#</a>
+		<code><a href="source-class-commande.html#35" title="Go to source code">setNum</a>( <span>mixed <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDate" id="_setDate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDate">#</a>
+		<code><a href="source-class-commande.html#36" title="Go to source code">setDate</a>( <span>mixed <var>$d</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEtat" id="_setEtat">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEtat">#</a>
+		<code><a href="source-class-commande.html#37" title="Go to source code">setEtat</a>( <span>mixed <var>$e</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setClient" id="_setClient">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setClient">#</a>
+		<code><a href="source-class-commande.html#38" title="Go to source code">setClient</a>( <span>mixed <var>$c</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNum" id="_getNum">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNum">#</a>
+		<code><a href="source-class-commande.html#41" title="Go to source code">getNum</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDate" id="_getDate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDate">#</a>
+		<code><a href="source-class-commande.html#42" title="Go to source code">getDate</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEtat" id="_getEtat">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEtat">#</a>
+		<code><a href="source-class-commande.html#43" title="Go to source code">getEtat</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClient" id="_getClient">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClient">#</a>
+		<code><a href="source-class-commande.html#44" title="Go to source code">getClient</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getProduits" id="_getProduits">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getProduits">#</a>
+		<code><a href="source-class-commande.html#45" title="Go to source code">getProduits</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getQuantites" id="_getQuantites">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getQuantites">#</a>
+		<code><a href="source-class-commande.html#46" title="Go to source code">getQuantites</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addProduit" id="_addProduit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addProduit">#</a>
+		<code><a href="source-class-commande.html#48-66" title="Go to source code">addProduit</a>( <span><code><a href="class-produit.html">produit</a></code> <var>$prod</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Permet d'ajouter un produit à la commande.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Permet d'ajouter un produit à la commande.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$prod</var></dt>
+					<dd><code><code><a href="class-produit.html">produit</a></code></code><br>Produit à ajouter à la commande.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addProduitQte" id="_addProduitQte">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addProduitQte">#</a>
+		<code><a href="source-class-commande.html#68-87" title="Go to source code">addProduitQte</a>( <span><code><a href="class-produit.html">produit</a></code> <var>$prod</var></span>, <span>integer <var>$qte</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Permet d'ajouter un produit à la commande dans une certaine quantité</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Permet d'ajouter un produit à la commande dans une certaine quantité</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$prod</var></dt>
+					<dd><code><code><a href="class-produit.html">produit</a></code></code><br>Produit à ajouter à la commande.</dd>
+					<dt><var>$qte</var></dt>
+					<dd><code>integer</code><br>Quantité de produit à ajouter à la commande</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeProduit" id="_removeProduit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeProduit">#</a>
+		<code><a href="source-class-commande.html#89-118" title="Go to source code">removeProduit</a>( <span><code><a href="class-produit.html">produit</a></code> <var>$prod</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Permet de retirer un produit de la commande.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Permet de retirer un produit de la commande.</p>
+
+<p>Si la quantité de produit est supérieure à 1, on enlève 1 à la quantité
+existante. Si le produit n'est présent dans la commande qu'en 1 seul
+exemplaire, on l'enlève complètement de la commande.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$prod</var></dt>
+					<dd><code><code><a href="class-produit.html">produit</a></code></code><br>Produit à retirer de la commande.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTotal" id="_getTotal">
+
+		<td class="attributes"><code>
+			 public 
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTotal">#</a>
+		<code><a href="source-class-commande.html#120-136" title="Go to source code">getTotal</a>( )</code>
+
+		<div class="description short">
+			
+<p>Permet de calculer le montant total de la commande.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Permet de calculer le montant total de la commande.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>Montant total de la commande<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="jsonSerialize" id="_jsonSerialize">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_jsonSerialize">#</a>
+		<code><a href="source-class-commande.html#138-154" title="Go to source code">jsonSerialize</a>( )</code>
+
+		<div class="description short">
+			
+<p>Spécifie les données qui doivent être linéarisées en JSON.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Spécifie les données qui doivent être linéarisées en JSON.</p>
+
+<p>Linéarise l'objet en une valeur qui peut être linéarisé nativement par la
+fonction json_encode().</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Retourne les données qui peuvent être linéarisées par la fonction
+json_encode()<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-JsonSerializable.html#_jsonSerialize">JsonSerializable::jsonSerialize()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		MGvpc-Contexte API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

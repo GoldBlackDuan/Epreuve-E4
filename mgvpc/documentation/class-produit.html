@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class produit | MGvpc-Contexte</title>
+
+	<script type="text/javascript" src="resources/combined.js?2882499003"></script>
+	<script type="text/javascript" src="elementlist.js?3230865684"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-client.html">client</a></li>
+				<li><a href="class-clientManager.html">clientManager</a></li>
+				<li><a href="class-commande.html">commande</a></li>
+				<li><a href="class-commandeManager.html">commandeManager</a></li>
+				<li><a href="class-database.html">database</a></li>
+				<li class="active"><a href="class-produit.html">produit</a></li>
+				<li><a href="class-produitManager.html">produitManager</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html" class="invalid">__autoload</a></li>
+				<li><a href="function-addClient.html">addClient</a></li>
+				<li><a href="function-deleteClient.html">deleteClient</a></li>
+				<li><a href="function-getClientId.html">getClientId</a></li>
+				<li><a href="function-getClients.html">getClients</a></li>
+				<li><a href="function-getClientsNom.html">getClientsNom</a></li>
+				<li><a href="function-getCommandesParClient.html">getCommandesParClient</a></li>
+				<li><a href="function-updateClient.html">updateClient</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class produit</h1>
+
+
+	<div class="description">
+	
+<p>Classe représentant les produits.</p>
+
+<p>Les produits sont définis par<br />
+- un id unique<br />
+- un libellé<br />
+- une description<br />
+- un prix</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>produit</span></b>			
+			 implements 
+				<a href="class-JsonSerializable.html"><span>JsonSerializable</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>Author:</b>
+				Ben<br />
+		<b>Located at</b> <a href="source-class-produit.html#2-61" title="Go to source code">classes/produit.class.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-produit.html#19-31" title="Go to source code">__construct</a>( <span>type <var>$id</var></span>, <span>type <var>$lib</var></span>, <span>type <var>$desc</var></span>, <span>mixed <var>$pri</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Instancie un objet produit.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Instancie un objet produit.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>type</code><br>Libellé du produit</dd>
+					<dt><var>$lib</var></dt>
+					<dd><code>type</code><br>Description longue du produit</dd>
+					<dt><var>$desc</var></dt>
+					<dd><code>type</code><br>Prix du produit</dd>
+					<dt><var>$pri</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setId" id="_setId">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setId">#</a>
+		<code><a href="source-class-produit.html#34" title="Go to source code">setId</a>( <span>mixed <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLib" id="_setLib">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLib">#</a>
+		<code><a href="source-class-produit.html#35" title="Go to source code">setLib</a>( <span>mixed <var>$lib</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDesc" id="_setDesc">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDesc">#</a>
+		<code><a href="source-class-produit.html#36" title="Go to source code">setDesc</a>( <span>mixed <var>$desc</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPrix" id="_setPrix">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPrix">#</a>
+		<code><a href="source-class-produit.html#37" title="Go to source code">setPrix</a>( <span>mixed <var>$pri</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getId" id="_getId">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getId">#</a>
+		<code><a href="source-class-produit.html#40" title="Go to source code">getId</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLib" id="_getLib">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLib">#</a>
+		<code><a href="source-class-produit.html#41" title="Go to source code">getLib</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDesc" id="_getDesc">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDesc">#</a>
+		<code><a href="source-class-produit.html#42" title="Go to source code">getDesc</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPrix" id="_getPrix">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPrix">#</a>
+		<code><a href="source-class-produit.html#43" title="Go to source code">getPrix</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="jsonSerialize" id="_jsonSerialize">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_jsonSerialize">#</a>
+		<code><a href="source-class-produit.html#45-59" title="Go to source code">jsonSerialize</a>( )</code>
+
+		<div class="description short">
+			
+<p>Spécifie les données qui doivent être linéarisées en JSON.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Spécifie les données qui doivent être linéarisées en JSON.</p>
+
+<p>Linéarise l'objet en une valeur qui peut être linéarisé nativement par la
+fonction json_encode().</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Retourne les données qui peuvent être linéarisées par la fonction
+json_encode()<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-JsonSerializable.html#_jsonSerialize">JsonSerializable::jsonSerialize()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		MGvpc-Contexte API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

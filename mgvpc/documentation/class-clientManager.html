@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class clientManager | MGvpc-Contexte</title>
+
+	<script type="text/javascript" src="resources/combined.js?2882499003"></script>
+	<script type="text/javascript" src="elementlist.js?3230865684"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-client.html">client</a></li>
+				<li class="active"><a href="class-clientManager.html">clientManager</a></li>
+				<li><a href="class-commande.html">commande</a></li>
+				<li><a href="class-commandeManager.html">commandeManager</a></li>
+				<li><a href="class-database.html">database</a></li>
+				<li><a href="class-produit.html">produit</a></li>
+				<li><a href="class-produitManager.html">produitManager</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html" class="invalid">__autoload</a></li>
+				<li><a href="function-addClient.html">addClient</a></li>
+				<li><a href="function-deleteClient.html">deleteClient</a></li>
+				<li><a href="function-getClientId.html">getClientId</a></li>
+				<li><a href="function-getClients.html">getClients</a></li>
+				<li><a href="function-getClientsNom.html">getClientsNom</a></li>
+				<li><a href="function-getCommandesParClient.html">getCommandesParClient</a></li>
+				<li><a href="function-updateClient.html">updateClient</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class clientManager</h1>
+
+
+	<div class="description">
+	
+<p>Classe d'accès aux données concernant les clients.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>Author:</b>
+				Ben<br />
+		<b>Located at</b> <a href="source-class-clientManager.html#4-235" title="Go to source code">classes/clientManager.class.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-clientManager.html#13-25" title="Go to source code">__construct</a>( <span><code><a href="class-database.html">database</a></code> <var>$database</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Instancie un objet clientManager.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Instancie un objet clientManager.</p>
+
+<p>Permet d'instanicer un objet clientManager qui nous permettra ensuite
+d'accéder aux données de la base spécifiée en paramètre.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$database</var></dt>
+					<dd><code><code><a href="class-database.html">database</a></code></code><br>Instance de la classe database.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-clientManager.html#27-95" title="Go to source code">save</a>( <span><code><a href="class-client.html">client</a></code> <var>$cli</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Enregistre ou Modifie le client dans la base.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enregistre ou Modifie le client dans la base.</p>
+
+<p>Pour enregistrer le client passé en paramètre en base de données : UPDATE
+si le client est déjà existant; INSERT sinon (si id non trouvé ou non
+spécifié).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cli</var></dt>
+					<dd><code><code><a href="class-produit.html">produit</a></code></code><br>Client à enregister ou mettre à jour.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>Retourne l'id du client ajouté ou mis à jour.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-clientManager.html#97-155" title="Go to source code">delete</a>( <span><code><a href="class-client.html">client</a></code> <var>$cli</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Supprime le client de la base.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Supprime le client de la base.</p>
+
+<p>Supprime de la base le client (table "client"), les commandes (table
+"commande") passées par celui-ci et les lignes de commandes associées (table
+"comporter").</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cli</var></dt>
+					<dd><code><code><a href="class-produit.html">produit</a></code></code><br>Objet client devant être supprimé.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>Retourne TRUE si la suppression est un succès, FALSE sinon.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getList" id="_getList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getList">#</a>
+		<code><a href="source-class-clientManager.html#157-193" title="Go to source code">getList</a>( <span>string <var>$restriction</var> = <span class="php-quote">'WHERE 1'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sélectionne un(des) client(s) dans la base.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sélectionne un(des) client(s) dans la base.</p>
+
+<p>Méthode générique de SELECT qui renvoie un tableau de client correspondant
+aux critères de sélection spécifiés. Si aucun paramètre n'est précisé, la
+valeur par défaut du paramètre 'WHERE 1' permet d'obtenir tous les
+clients.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$restriction</var></dt>
+					<dd><code>string</code><br>Chaîne de caractère devant être une restriction SQL valide.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Renvoie un tableau d'objet(s) client.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-produit.html">produit</a></code>|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-clientManager.html#195-233" title="Go to source code">get</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sélectionne un client dans la base.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sélectionne un client dans la base.</p>
+
+<p>Méthode de SELECT qui renvoie le client dont l'id est spécifié en
+paramètre.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>ID du client recherché</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-produit.html">produit</a></code>|boolean</code><br>Renvoie l'objet client recherché ou FALSE s'il n'a pas été trouvé<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		MGvpc-Contexte API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
